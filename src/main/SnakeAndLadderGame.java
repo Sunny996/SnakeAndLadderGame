@@ -14,6 +14,8 @@ public class SnakeAndLadderGame {
             int diceVal = ((int) (Math.random() * 10 % 6 + 1));
             switch (opt) {
                 case 1:
+                    if ((playerPosition + diceVal) > MAX_BOARD_VALUE) {}
+                    else
                     playerPosition += diceVal;
                     break;
                 case 2:
