@@ -9,14 +9,15 @@ public class SnakeAndLadderGame {
 
     public int option() {
         int playerPosition = 0;
+        int noOfDieRolls = 0;
         while (playerPosition < MAX_BOARD_VALUE) {
             int opt = (int) (Math.random() * 10 % 3);
             int diceVal = ((int) (Math.random() * 10 % 6 + 1));
             switch (opt) {
                 case 1:
-                    if ((playerPosition + diceVal) > MAX_BOARD_VALUE) {}
-                    else
-                    playerPosition += diceVal;
+                    if ((playerPosition + diceVal) > MAX_BOARD_VALUE) {
+                    } else
+                        playerPosition += diceVal;
                     break;
                 case 2:
                     if ((playerPosition - diceVal) < MIN_BOARD_VALUE)
@@ -25,7 +26,11 @@ public class SnakeAndLadderGame {
                         playerPosition -= diceVal;
                     break;
             }
+            noOfDieRolls++;
+            System.out.println("Player Position :" + playerPosition);
+
         }
+        System.out.println("No of die rolls to win_" + noOfDieRolls);
         return playerPosition;
     }
 }
