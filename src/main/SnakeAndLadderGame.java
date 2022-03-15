@@ -1,9 +1,9 @@
 package main;
 
 public class SnakeAndLadderGame {
-    int playerPosition = 0;
-    int LADDER = 1;
-    int SNAKE = 2;
+    public int playerPosition = 0;
+    public final int LADDER = 1;
+    public final int SNAKE = 2;
 
     public int diceRoll() {
         return (int) (Math.random() * 10 % 6 + 1);
