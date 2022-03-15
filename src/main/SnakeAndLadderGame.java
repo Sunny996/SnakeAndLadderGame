@@ -2,10 +2,10 @@ package main;
 
 public class SnakeAndLadderGame {
 
-    int LADDER = 1;
-    int SNAKE = 2;
-    int MAX_BOARD_VALUE = 100;
-    int MIN_BOARD_VALUE = 0;
+    public final int LADDER = 1;
+    public final int SNAKE = 2;
+    public final int MAX_BOARD_VALUE = 100;
+    public final int MIN_BOARD_VALUE = 0;
     int players[] = new int[2];
 
     public int option() {
@@ -16,12 +16,12 @@ public class SnakeAndLadderGame {
             int opt = (int) (Math.random() * 10 % 3);
             int diceVal = ((int) (Math.random() * 10 % 6 + 1));
             switch (opt) {
-                case 1:
+                case LADDER:
                     if ((players[playerIndex] + diceVal) > MAX_BOARD_VALUE) {
                     } else
                         players[playerIndex] += diceVal;
                     break;
-                case 2:
+                case SNAKE:
                     if ((players[playerIndex] - diceVal) < MIN_BOARD_VALUE)
                         players[playerIndex] = MIN_BOARD_VALUE;
                     else
