@@ -2,10 +2,10 @@ package main;
 
 public class SnakeAndLadderGame {
 
-    int LADDER = 1;
-    int SNAKE = 2;
-    int MAX_BOARD_VALUE = 100;
-    int MIN_BOARD_VALUE = 0;
+    public final int LADDER = 1;
+    public final int SNAKE = 2;
+    public final int MAX_BOARD_VALUE = 100;
+    public final int MIN_BOARD_VALUE = 0;
 
     public int option() {
         int playerPosition = 0;
