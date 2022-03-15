@@ -9,8 +9,6 @@ public class SnakeAndLadderGame {
     int players[] = new int[2];
 
     public int option() {
-        int playerPosition = 0;
-        int noOfDieRolls = 0;
         int playerIndex = 0;
         while (players[playerIndex] < MAX_BOARD_VALUE) {
             int opt = (int) (Math.random() * 10 % 3);
