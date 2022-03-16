@@ -16,12 +16,12 @@ public class SnakeAndLadderGame {
             switch (opt) {
                 case LADDER:
                     players[playerIndex] += diceVal;
-                    if ((players[playerIndex] > WINNING_POSITION)
+                    if (players[playerIndex] > WINNING_POSITION)
                         players[playerIndex] -= diceVal;
                     break;
                 case SNAKE:
                     players[playerIndex] -= diceVal;
-                    if ((players[playerIndex]) < START_POSITION)
+                    if (players[playerIndex] < START_POSITION)
                         players[playerIndex] = START_POSITION;
                     playerIndex = Math.abs(playerIndex - 1);
                     break;
