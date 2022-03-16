@@ -4,23 +4,22 @@ public class SnakeAndLadderGame {
 
     public final int LADDER = 1;
     public final int SNAKE = 2;
-    public final int MAX_BOARD_VALUE = 100;
-    public final int MIN_BOARD_VALUE = 0;
+    public final int WINNING_POSITION = 100;
+    public final int START_POSITION = 0;
 
     public int option() {
         int playerPosition = 0;
-        while (playerPosition < MAX_BOARD_VALUE) {
+        while (playerPosition < WINNING_POSITION) {
             int opt = (int) (Math.random() * 10 % 3);
             int diceVal = ((int) (Math.random() * 10 % 6 + 1));
             switch (opt) {
-                case 1:
+                case LADDER:
                     playerPosition += diceVal;
                     break;
-                case 2:
-                    if ((playerPosition - diceVal) < MIN_BOARD_VALUE)
-                        playerPosition = MIN_BOARD_VALUE;
-                    else
-                        playerPosition -= diceVal;
+                case SNAKE:
+                    playerPosition -= diceVal;
+                    if (playerPosition < START_POSITION)
+                        playerPosition = START_POSITION;
                     break;
             }
         }
