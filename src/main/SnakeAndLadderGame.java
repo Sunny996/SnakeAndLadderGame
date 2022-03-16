@@ -16,7 +16,7 @@ public class SnakeAndLadderGame {
             switch (opt) {
                 case LADDER:
                     players[playerIndex] += diceVal;
-                    if ((players[playerIndex] > WINNING_POSITION)
+                    if (players[playerIndex] > WINNING_POSITION)
                         players[playerIndex] -= diceVal;
                     break;
                 case SNAKE:
